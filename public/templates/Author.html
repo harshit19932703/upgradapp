@@ -1,0 +1,52 @@
+<!--
+Id:<input type="text" ng-model="myid">
+Type:<input type="text" ng-model="mytype">
+<button type="submit" ng-click="addques()">ADD</button> -->
+<span style="font-family:Roboto-Bold;font-size:18px;">Question Builder</span>
+<div style="margin-top:15px;padding: 10px;">
+<span style="font-family:Roboto-Bold;">  What Type Of Question you want to create?</span>
+<div class="form-check " style="margin-bottom:5px;margin-top:5px;">
+  <input class="form-check-input" type="radio" name="mcq" id="mcq" value="mcq" ng-model="typeofques">
+  <label class="form-check-label" for="mcq">
+     Multiple Choice Questions
+  </label>
+</div>
+<div class="form-check" style="margin-bottom:5px;">
+  <input class="form-check-input" type="radio" name="submission" id="submission" value="submission" ng-model="typeofques">
+  <label class="form-check-label" for="submission">
+    Submission Type question
+  </label>
+</div>
+<div class="form-check disabled">
+  <input class="form-check-input" type="radio" name="passsage" id="passage" value="passage" ng-model="typeofques">
+  <label class="form-check-label" for="passage">
+    Passage (text) Type Question
+  </label>
+</div>
+</div>
+
+<div ng-show="typeofques === 'mcq'"><mcq></mcq></div>
+<div ng-show="typeofques === 'submission'"><subm></subm></div>
+<div ng-show="typeofques === 'passage'"><pass></pass></div>
+<hr>
+<!-- <button type="submit" ng-click="addques(typeofques)" ng-if="typeofques">ADD</button> -->
+
+<div class="row"  style="margin-bottom:1%" id="listcards" ng-if="typeofques">
+<div class="col-md-12">
+
+  <div class="card-header">
+    <div class="row">
+      <div class="col-md-12" style="padding: 14px;">
+        <span style="color:grey;margin-top:3.1vh">Click Author to create a new question and will be added automatically to the question list</span>
+        <button  class="btn btn-primary" ng-click="addques(typeofques)" style="float:right;">Author</button>
+        <a  href= "/teacher" style="float:right;margin-right: 12px" class="btn btn-light">Cancel</a>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+</div>

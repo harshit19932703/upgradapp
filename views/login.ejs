@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/scripts/bootstrap/dist/css/bootstrap.min.css' />
+  <link rel='stylesheet' href='/scripts/animate.css/animate.min.css' />
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="/stylesheets/logo.png" style="width:7%"><hr>
+    <!-- <a href="" ui-sref="TEACHER" target="_self">Teacher</a>
+   <a href="" ui-sref="STUDENT" target="_self">Student</a> -->
+    <div class="card mycard animated zoomIn">
+      <div class="card-header">
+        <span style="font-family:roboto-bold">Please Select login</span>
+      </div>
+      <div class="card-body">
+        <span style="color:#818182"">I am a..</span>
+        <br>
+        <div class="form-check" style="margin-top:5%;margin-bottom:5%">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"  value="STUDENT" ng-model="x">
+          <label class="form-check-label logintext" for="exampleRadios1">
+    Student
+  </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="TEACHER" ng-model="x">
+          <label class="form-check-label logintext" for="exampleRadios2">
+    Teacher
+  </label>
+        </div>
+
+
+        <hr>
+        <div >
+          <span style="font-size:12px;color:#bbbbbb">Please Login to continue...</span>
+          <span style="float:right">
+          <button type="button" class="btn  loginbuttoncancel">Cancel</button>
+          <!-- <button type="button" class="btn  loginbutton" ng-disabled="!x"><span ng-show="!x">SelctOne</span> -->
+            <a href="" ui-sref="TEACHER" target="_self" ng-show="x==='TEACHER'" style="color:white;padding:11px" class="btn loginbutton">Login</a>
+            <a href="" ui-sref="STUDENT" target="_self" ng-show="x==='STUDENT'" style="color:white;padding:11px" class="btn loginbutton">Login</a>
+          <!-- </button> -->
+        </span>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  </div>
+
+
+
+  <script src="/scripts/angular/angular.min.js"></script>
+  <script src="/scripts/jquery/dist/jquery.min.js"></script>
+  <script src="/scripts/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="scripts/@uirouter/angularjs/release/angular-ui-router.js"></script>
+  <script src="scripts/oclazyload/dist/ocLazyLoad.min.js"></script>
+  <script src="scripts/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+
+  <script src="/app.js"></script>
+
+</body>
+
+</html>

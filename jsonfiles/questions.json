@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "type": "submission",
+    "title": "Road Cross Tutorial in four steps",
+    "description": "Steps to cross the road? ",
+    "instruction": "Write in Brief"
+  },
+  {
+    "id": 2,
+    "type": "passage",
+    "title": "Passage on Road Security and Rules",
+    "description": "Write a passage on road regulations and safety of people ",
+    "instruction": "Carefully",
+    "answer": "Write in eight steps"
+  },
+  {
+    "id": 3,
+    "type": "mcq",
+    "title": "Who is the current president of india?",
+    "description": "Current president of india",
+    "instruction": "Choose One",
+    "options": [
+      "aa",
+      "bb",
+      "cc",
+      "dd"
+    ],
+    "rightanswer": [
+      true,
+      null,
+      true,
+      null
+    ]
+  },
+  {
+    "id": 4,
+    "type": "submission",
+    "title": "Buying a house",
+    "description": "Do you regret buying a property in bangalore?if yes why? what are you going to do about it?",
+    "instruction": "Fill in 300 words"
+  }
+]

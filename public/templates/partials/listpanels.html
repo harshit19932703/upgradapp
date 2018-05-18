@@ -1,0 +1,88 @@
+<!-- <input type="checkbox" ng-click="checkAll()"> Check all<br><br> -->
+<!-- <button ng-click="assign()">ASSIGN</button> -->
+<!-- <div ng-repeat="data in my">
+  <div class="form-check">
+    <input class="form-check-input position-static" type="checkbox" id="{{data.id}}" checklist-model="user.my" checklist-value="data.id">   <label class="form-check-label" for="{{data.id}}">{{data.id}} - {{data.type}} -{{data.title}}</label>
+  </div>
+</div> -->
+
+<div class="row"  style="margin-bottom:1%" id="listcards">
+<div class="col-md-12">
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-md-2 textleft"><input type="checkbox" ng-click="checkAll()" style="margin-top:3.1vh">  &nbsp <span style="color:#bbbbbb">Select all</span></div>
+      <div class="col-md-10" style="padding: 14px;">
+        <span style="color:grey;margin-top:3.1vh"> Select Questions to assign</span>
+        <a href="/author" target="_self" class="btn btn-outline-primary" style="float:right;">Author New Question</a>
+          <button ng-click="assign()" ng-class="{'btn btn-primary' : !check, 'btn btn-secondary' : check}" style="float:right;margin-right: 12px" ng-disabled="check" data-toggle="modal" data-target="#exampleModal" >ASSIGN</button>
+
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+<hr>
+
+
+
+
+<!-- //structure for panels -->
+<div class="row animated bounceInUp" ng-repeat="data in my" style="margin-bottom:1%" id="listcards" >
+<div class="col-md-1 ">
+<input class="form-check-input position-static" type="checkbox" id="{{data.id}}" checklist-model="user.my" checklist-value="data.id" style=" float: right;margin-top: 3vh;" ng-click="validation()"/>
+</div>
+<div class="col-md-11">
+<div class="card ">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-md-1 textleft"><span style="color: #bbbbbb;font-size: 11px;">S.No</span><br><span style="font-size: 21px;color:#818182;">{{data.id}}<span></div>
+      <div class="col-md-9" style="padding: 14px;"><span>{{data.title}}</span><br><span style="color: #bbbbbb;font-size: 11px;">{{data.description}}<span></div>
+      <div class="col-md-2 textright" style="padding: 11px;"><span style="color: #bbbbbb;font-size: 11px;">QUESTION TYPE</span><br>{{data.type | uppercase}}</div>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+
+
+<!-- modal for students -->
+
+
+
+<!-- <div ng-repeat="student in students">
+<div class="form-check">
+    <input class="form-check-input position-static" type="checkbox" id="{{student.sname}}" checklist-model="userstudent.students" checklist-value="student.sname">   <label class="form-check-label" for="{{data.id}}">{{student.sname}}</label>
+  </div>
+</div> -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Student List</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <span style="color:#bbbbbb;font-size:18px">Select Students to assign :</span>
+        <div ng-repeat="student in students" style="padding:8px">
+        <div class="form-check" style="margin-top: 10px;margin-left: 20px;">
+
+            <input class="form-check-input position-static" type="checkbox" id="{{student.sname}}" checklist-model="userstudent.students" checklist-value="student.sname">   <label class="form-check-label" for="{{data.id}}">{{student.sname}}</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button ng-if="assignclick" ng-click="assignstudents()" class="btn btn-primary">Assign</button>
+      </div>
+    </div>
+  </div>
+</div>

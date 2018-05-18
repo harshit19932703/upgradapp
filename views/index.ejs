@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/scripts/bootstrap/dist/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/scripts/animate.css/animate.min.css' />
+</head>
+
+<body ng-controller="baseController" style="height:100%;width:100%">
+
+  <div class="container-fluid" style="overflow: auto;">
+    <a href="/" target="_self"><img src="/stylesheets/logo.png" style="width:7%"></a><hr>
+    <div ui-view="" style="padding:10px"></div>
+  </div>
+
+
+  <script src="/scripts/angular/angular.min.js"></script>
+  <script src="/scripts/jquery/dist/jquery.min.js"></script>
+    <script src="scripts/checklist-model/checklist-model.js"></script>
+  <script src="/scripts/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="scripts/@uirouter/angularjs/release/angular-ui-router.js"></script>
+  <script src="scripts/underscore/underscore-min.js"></script>
+  <script src="scripts/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+  <script src="scripts/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+
+  <script src="/app.js"></script>
+</body>
+
+</html>

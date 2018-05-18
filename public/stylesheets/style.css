@@ -1,0 +1,73 @@
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("/stylesheets/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("/stylesheets/fonts/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: Roboto-Medium;
+  src: url("/stylesheets/fonts/Roboto/Roboto-Medium.ttf");
+}
+*{
+  font-family: Roboto-Regular
+}
+body {
+  padding: 10px 10px 10px 10px;
+  font-size: 12px ;
+  font-family: Roboto-Regular !important;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.loginbutton {
+  height: 44px;
+  width: 81px;
+  border-radius: 1px;
+  font-size: 13px !important;
+  background-color: #0069d9;
+  color:white;
+}
+.loginbuttoncancel{
+  height: 44px;
+  width: 81px;
+  border-radius: 1px;
+  font-size: 13px !important;
+  color:white;
+}
+.mycard{
+border-radius: 0px !important;
+width: 55%;
+margin: auto;
+top: 10vh;
+box-shadow: 1px 1px 1px 1px #e9ecef;
+}
+.logintext{
+  font-family: roboto-medium;
+padding-left: 8px;
+}
+#listcards .card{
+  background-color:white;
+  box-shadow: 0px 1px 0px 1px #bbbbbb38;
+}
+#listcards .card-header{
+  background-color:white;
+  padding:0px;
+}
+.textleft{
+  border-right: 1px solid #bbbbbb;
+background-color: #dee2e654;
+padding-top: 6px;
+}
+.textright{
+  border-left: 1px solid #bbbbbb;
+background-color: #dee2e654;
+}
+#listcards .row{
+  margin:0px
+}
