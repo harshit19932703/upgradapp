@@ -12,10 +12,11 @@ var app = express();
 var http = require('http').Server(app);
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, 'public')));
 app.use('/scripts', express.static(path.join(__dirname, 'node_modules')));
 app.use('/jsonfiles', express.static(path.join(__dirname, 'jsonfiles')));
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
