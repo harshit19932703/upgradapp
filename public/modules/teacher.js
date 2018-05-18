@@ -37,6 +37,7 @@
                 my: []
               }
               $scope.checkAll = function() {
+                $scope.check=false;
                 $scope.user.my = $scope.my.map(function(item) {
                   return item.id;
                 });
