@@ -13,18 +13,20 @@ var http = require('http').Server(app);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/scripts', express.static(path.join(__dirname, 'node_modules')));
+app.use('/jsonfiles', express.static(path.join(__dirname, 'jsonfiles')));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use('/scripts', express.static(path.join(__dirname, 'node_modules')));
-app.use('/jsonfiles', express.static(path.join(__dirname, 'jsonfiles')));
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
