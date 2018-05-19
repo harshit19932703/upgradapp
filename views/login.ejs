@@ -43,8 +43,8 @@
           <span style="float:right">
           <button type="button" class="btn  loginbuttoncancel">Cancel</button>
           <!-- <button type="button" class="btn  loginbutton" ng-disabled="!x"><span ng-show="!x">SelctOne</span> -->
-            <a href="" ui-sref="TEACHER" target="_self" ng-show="x==='TEACHER'" style="color:white;padding:11px" class="btn loginbutton">Login</a>
-            <a href="" ui-sref="STUDENT" target="_self" ng-show="x==='STUDENT'" style="color:white;padding:11px" class="btn loginbutton">Login</a>
+            <a href="" ui-sref="TEACHER" target="_self" ng-if="x==='TEACHER'" style="color:white;padding:11px" class="btn loginbutton">Login</a>
+            <a href="" ui-sref="STUDENT" target="_self" ng-if="x==='STUDENT'" style="color:white;padding:11px" class="btn loginbutton">Login</a>
           <!-- </button> -->
         </span>
         </div>
