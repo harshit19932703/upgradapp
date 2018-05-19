@@ -63,6 +63,7 @@
         }
         $scope.close = function() {
           $scope.ans = false;
+          window.location='/student'
         }
 
       }
