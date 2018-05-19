@@ -27,7 +27,7 @@ router.get('/getlist',function(req,res){
 });
 router.post('/addlist',addlist);
 router.post('/updatestudent',updatestudent);
-router.post('/deleteques',deleteques);
+//router.post('/deleteques',deleteques);
 router.get('/getstudentlist',function(req,res){
   studentlist(req, function(obj){
 			res.json(obj).end();
