@@ -33,7 +33,7 @@ app.use('/users', usersRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
-http.listen(8000, function() {
+http.listen(process.env.PORT||8000, function() {
     console.log('listening on *:8000');
 });
 
