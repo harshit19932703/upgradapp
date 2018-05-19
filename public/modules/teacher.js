@@ -44,6 +44,7 @@
               };
               $scope.assign = function() {
                 console.log($scope.user.my);
+                if($scope.user.my.length>0){
                 $scope.assignclick = true;
                 $scope.studentdata = function(cb) {
                   $http.get('/getstudentlist').then(function(response) {
@@ -57,6 +58,11 @@
                 }
 
                 $scope.studentdata(callback);
+              }
+              else{
+                alert("Select one atleast")
+                window.location='/teacher'
+              }
               }
 
               $scope.userstudent = {
@@ -84,6 +90,22 @@
                 alert("Question(s) Assigned Successfully");
 
               }
+
+           $scope.deleteques=function(){
+             console.log($scope.user.my);
+             var req = {
+               method: 'POST',
+               url: '/deleteques',
+               data: $scope.user.my
+             }
+             $http(req).then(function(response) {
+               console.log("RES", response);
+               window.location='/teacher'
+             });
+             alert("Question(s) Deleted Successfully");
+
+           }
+
           $scope.check=true
           $scope.validation=function(){
             if($scope.user.my.length > 0){

@@ -3,12 +3,14 @@
     .controller("AuthorDashboardController", ['$scope', '$rootScope', '$interval', '$window', '$http','getlistforid',
       function($scope, $rootScope, $interval, $window, $http,getlistforid) {
           $scope.list=getlistforid;
-          $scope.id=$scope.list.length+1;
+          $scope.total=$scope.list.length;
+          $scope.id=$scope.list[$scope.total - 1].id;
+          console.log("Last id",$scope.id+1);
      $scope.data=[]
         $scope.addques = function(d) {
           if (d === "submission") {
             $scope.data.push({
-              "id":$scope.id,
+              "id":$scope.id+1,
               "type":d,
               "title":$scope.submtitle,
               "description":$scope.submdescription,
@@ -27,7 +29,7 @@
           }
           if (d === "mcq") {
             $scope.data.push({
-              "id":$scope.id,
+              "id":$scope.id+1,
               "type":d,
               "title":$scope.mcqtitle,
               "description":$scope.mcqdescription,
@@ -48,6 +50,7 @@
           }
           if (d === "passage") {
             $scope.data.push({
+              "id":$scope.id+1,
               "type":d,
               "title":$scope.passtitle,
               "description":$scope.passdesc,

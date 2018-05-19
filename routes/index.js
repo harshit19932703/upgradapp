@@ -3,7 +3,8 @@ var router = express.Router();
 var readqlistfile=require('../queries/qlist');
 var addlist=require('../queries/addlist')
 var studentlist=require('../queries/studentlist')
-var updatestudent=require('../queries/updatestudent')
+var updatestudent=require('../queries/updatestudent');
+var deleteques=require('../queries/deleteques');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -26,6 +27,7 @@ router.get('/getlist',function(req,res){
 });
 router.post('/addlist',addlist);
 router.post('/updatestudent',updatestudent);
+router.post('/deleteques',deleteques);
 router.get('/getstudentlist',function(req,res){
   studentlist(req, function(obj){
 			res.json(obj).end();
