@@ -16,7 +16,7 @@
         app.use('/scripts', express.static(path.join(process.env.PWD, 'node_modules')));
         app.use('/jsonfiles', express.static(path.join(process.env.PWD, 'jsonfiles')));
         app.set('views', path.join(process.env.PWD, 'views'));
-        app.use(express.static(path.join(process.env.PWD, 'public')));
+        app.use(express.static(path.join(process.env.PWD, '/public')));
 
         app.set('view engine', 'ejs');
 
