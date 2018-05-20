@@ -1,6 +1,4 @@
 var fs = require('fs');
-
-
 function readqlistfile(req, cb) {
 	fs.readFile("jsonfiles/questions.json", 'utf8', function(err, data) {
 	        if (err)

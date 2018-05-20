@@ -27,12 +27,10 @@
               function callback(data) {
                 console.log('data', data);
                 $scope.my = data;
-                //$window.localStorage.setItem('mystorage', JSON.stringify($scope.my));
               }
 
               $scope.getdata(callback);
-              // $scope.my=JSON.parse($window.localStorage.mystorage);
-              // console.log("HERE",$scope.my)
+
               $scope.user = {
                 my: []
               }

@@ -1,6 +1,4 @@
 var fs = require('fs');
-
-
 function studentlist(req, cb) {
 	fs.readFile("jsonfiles/studentlist.json", 'utf8', function(err, data) {
 	        if (err)

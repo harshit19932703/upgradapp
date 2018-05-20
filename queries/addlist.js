@@ -2,7 +2,6 @@ var fs = require('fs');
 
 function addlist(req, res) {
   var newdata = req.body[0];
-  console.log("XXXXXXXXXX",newdata);
   fs.readFile('jsonfiles/questions.json', function(err, data) {
     var json = JSON.parse(data);
     json.push(newdata);
@@ -12,9 +11,6 @@ function addlist(req, res) {
       res.send('ok')
     });
   })
-
-
-
 }
 
 module.exports = addlist;

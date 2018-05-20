@@ -1,12 +1,5 @@
-<!-- <input type="checkbox" ng-click="checkAll()"> Check all<br><br> -->
-<!-- <button ng-click="assign()">ASSIGN</button> -->
-<!-- <div ng-repeat="data in my">
-  <div class="form-check">
-    <input class="form-check-input position-static" type="checkbox" id="{{data.id}}" checklist-model="user.my" checklist-value="data.id">   <label class="form-check-label" for="{{data.id}}">{{data.id}} - {{data.type}} -{{data.title}}</label>
-  </div>
-</div> -->
 
-<div class="row"  style="margin-bottom:1%" id="listcards">
+<div class="row animated slideInLeft"  style="margin-bottom:1%" id="listcards">
 <div class="col-md-12">
 <div class="card">
   <div class="card-header">
@@ -16,7 +9,7 @@
         <span style="color:grey;margin-top:3.1vh"> Select Questions to assign</span>
         <a href="/author" target="_self" class="btn btn-outline-primary" style="float:right;">Author New Question</a>
         <button ng-click="assign()" ng-class="{'btn btn-primary' : !check, 'btn btn-secondary' : check}" style="float:right;margin-right: 12px" ng-disabled="check" data-toggle="modal" data-target="#exampleModal" >ASSIGN</button>
-          <button ng-click="deleteques()" ng-class="{'btn btn-primary' : !check, 'btn btn-secondary' : check}" style="float:right;margin-right: 12px" ng-disabled="check"  >Delete</button> 
+          <button ng-click="deleteques()" ng-class="{'btn btn-primary' : !check, 'btn btn-secondary' : check}" style="float:right;margin-right: 12px" ng-disabled="check"  >Delete</button>
 
       </div>
 
@@ -54,12 +47,6 @@
 <!-- modal for students -->
 
 
-
-<!-- <div ng-repeat="student in students">
-<div class="form-check">
-    <input class="form-check-input position-static" type="checkbox" id="{{student.sname}}" checklist-model="userstudent.students" checklist-value="student.sname">   <label class="form-check-label" for="{{data.id}}">{{student.sname}}</label>
-  </div>
-</div> -->
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

@@ -69,21 +69,6 @@
             alert("Saved Successfully");
           }
 
-          // $scope.data = [{
-          //   "id": $scope.myid,
-          //   "type":$scope.mytype
-          // }]
-          // console.log($scope.data)
-          // var req = {
-          //   method: 'POST',
-          //   url: '/addlist',
-          //   data: $scope.data
-          // }
-          // $http(req).then(function(response) {
-          //   console.log("RES", response);
-          // });
-          // alert("Saved Successfully");
-
         }
       }
     ])
@@ -94,8 +79,6 @@
           transclude: true,
           controller: ['$scope', '$http', '$window',
             function($scope, $http, $window) {
-
-
 
             }
           ],
@@ -117,8 +100,6 @@
               $scope.getvalues = function() {
                 console.log($scope.submtitle)
               }
-
-
             }
           ],
           templateUrl: "/templates/partials/sub.html",
@@ -135,9 +116,6 @@
           transclude: true,
           controller: ['$scope', '$http', '$window',
             function($scope, $http, $window) {
-
-
-
             }
           ],
           templateUrl: "/templates/partials/pass.html",

@@ -35,7 +35,6 @@
                         controller: 'TeacherDashboardController',
                         templateUrl: '/templates/TeacherSettings.html',
                         display: "UpGradTeacher Dashboard",
-                        degree: 1,
                         resolve: {
                             load: ['$ocLazyLoad', '$rootScope', function($ocLazyLoad, $rootScope) {
                                 return $ocLazyLoad.load("TeacherSettings");
@@ -47,7 +46,6 @@
                         controller: 'StudentDashboardController',
                         templateUrl: '/templates/StudentSettings.html',
                         display: "UpGradStudent Dashboard",
-                        degree: 1,
                         resolve: {
                             load: ['$ocLazyLoad', '$rootScope', function($ocLazyLoad, $rootScope) {
                                 return $ocLazyLoad.load("StudentSettings");
